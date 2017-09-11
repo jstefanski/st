@@ -29,6 +29,7 @@ st: ${OBJ}
 
 clean:
 	@echo cleaning
+	@rm -f config.h
 	@rm -f st ${OBJ} st-${VERSION}.tar.gz
 
 dist: clean
