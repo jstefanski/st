@@ -314,6 +314,7 @@ typedef struct {
 } Shortcut;
 
 /* function definitions used in config.h */
+static void noop(const Arg *);
 static void clipcopy(const Arg *);
 static void clippaste(const Arg *);
 static void kscrolldown(const Arg *);
@@ -1182,6 +1183,11 @@ selpaste(const Arg *dummy)
 {
 	XConvertSelection(xw.dpy, XA_PRIMARY, sel.xtarget, XA_PRIMARY,
 			xw.win, CurrentTime);
+}
+
+void
+noop(const Arg *dummy)
+{
 }
 
 void
